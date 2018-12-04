@@ -1,0 +1,13 @@
+# Vim swaps
+*.swp
+*.swo
+.idea
+
+__pycache__
+
+*.pdf
+*.log
+*.aux
+
+old_test.py
+
