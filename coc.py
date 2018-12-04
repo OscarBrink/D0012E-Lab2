@@ -1,11 +1,10 @@
-from random import randint, choice
+from random import randint, choice, random
 
 nops = 0
 
 def max_div(lst, start=0, end=None):
     global nops
     nops = 0
-    s = ""
 
     if end is None:
         end = len(lst) - 1
@@ -14,14 +13,15 @@ def max_div(lst, start=0, end=None):
 
     if size <= 1:
         raise ValueError
-#    elif size == 1:
-#        return (lst[start], lst[start], (lst[start], lst[start], 1.0), "")
+
+    # Base Case 1
     elif size == 2:
-#       print("1", ((lst[0], lst[1], lst[1] / lst[0]), (lst[0], lst[1], lst[1] / lst[0])))
         if lst[start] < lst[end]:
-            return (lst[start], lst[end], (lst[start], lst[end], lst[end] / lst[start]), "")
+            return (lst[start], lst[end], (lst[start], lst[end], lst[end] / lst[start]))
         else: 
-            return (lst[end], lst[start], (lst[start], lst[end], lst[end] / lst[start]), "")
+            return (lst[end], lst[start], (lst[start], lst[end], lst[end] / lst[start]))
+
+    # Base Case 2
     elif size == 3:
         mid = start + 1
         min_val = lst[start]
@@ -29,48 +29,37 @@ def max_div(lst, start=0, end=None):
         for num in lst[mid], lst[end]:
             if num < min_val: min_val = num
             if num > max_val: max_val = num
+
         # Select which division to pick from list [a, b, c]
         if lst[start] <= lst[mid] <= lst[end]:      # a <= b <= c : c / a
-            return (min_val, max_val, (lst[start], lst[end], lst[end] / lst[start]), "")
+            return (min_val, max_val, (lst[start], lst[end], lst[end] / lst[start]))
         elif lst[start] > lst[mid] <= lst[end]:     # a > b <= c  : c / b
-            return (min_val, max_val, (lst[mid], lst[end], lst[end] / lst[mid]), "")
+            return (min_val, max_val, (lst[mid], lst[end], lst[end] / lst[mid]))
         else:                                       # b > c       : b / a
-            return (min_val, max_val, (lst[start], lst[mid], lst[mid] / lst[start]), "")
+            return (min_val, max_val, (lst[start], lst[mid], lst[mid] / lst[start]))
         
 
     split = start + (size // 2) - 1
 
+    # Recursion
     lower = max_div(lst, start, split)
     upper = max_div(lst, split + 1, end)
 
-#   print("COMPARING")
-#   print(lst[:len(lst)//2], lst[len(lst)//2:])
-#   print(lower)
-#   print(upper)
-#   print("---------")
 
-    s += lower[-1]
-    s += upper[-1]
-
-    s += "\n" + "COMPARING"
-    s += "\n" + str(lst[:len(lst)//2]) + " " + str(lst[len(lst)//2:])
-    s += "\n" + str(lower[:-1])
-    s += "\n" + str(upper[:-1])
-    s += "\n" + "---------"
-
-    best_div = lower[2] if lower[2][2] >= upper[2][2] else upper[2]
-
+    # Determine new max and min values
     min_val = lower[0]
     max_val = lower[0]
     for num in (lower[1], upper[0], upper[1]):
         if num < min_val: min_val = num
         if num > max_val: max_val = num
 
+    # Determine best fraction
+    best_div = lower[2] if lower[2][2] >= upper[2][2] else upper[2]
     new_div = (lower[0], upper[1], upper[1] / lower[0])
     if new_div[2] > best_div[2]:
         best_div = new_div
 
-    return (min_val, max_val, best_div, s)
+    return (min_val, max_val, best_div)
 
 
 def slow_max(lst):
@@ -117,16 +106,13 @@ def min_max(lst, start=0, end=None):
     )
 
 
-# lst = [4,3,54,1,8,382,5,3,3]
-#lst = [randint(1, 100) for i in range(0, 30)]
-
 def generate_list(size):
 #    lst = []
 #    for i in range(size):
 #        r = list(range(1, size * 10))
 #        lst.append(r.pop(choice(list(range(len(r))))))
 #    return lst
-   return [randint(1, size * 10) for i in range(size)]
+   return [randint(1, size * 10) * random() for i in range(size)]
 
 
 lst = []
@@ -139,14 +125,13 @@ for i in range(0, 8):
 
 failures = 0
 try:
-    raise KeyboardInterrupt
     for i in range(20):
         size = randint(2, 1025)
-        print("Generating of size:", size)
+        pr_str = str(i) + " " + str(size)
         l = generate_list(size)
-        print("cac ", i)
+        print(pr_str, "cac ", end=" ")
         cac = max_div(l)
-        print("slow", i)
+        print(pr_str, "slow", end=" ")
         slow = slow_max(l)
         verified = False
         for m in slow:
@@ -157,13 +142,13 @@ try:
             failures += 1
             print("FAIL:")
             print(cac[-1])
-            print(cac[:-1])
+            print(cac)
             print(*slow)
             print()
 
             input()
         else:
-            print("SUCCESS")
+            print("SUCCESS" + " "*8, end="\r")
 except KeyboardInterrupt:
     print("interrupted")
 
@@ -171,10 +156,9 @@ if failures > 0:
     print(failures, "failed.")
 
 
-lst = generate_list(2)
-lst = [1, 3, 2]
+lst = generate_list(8)
 print(lst)
-print(max_div(lst)[:-1])
+print(max_div(lst))
 print(slow_max(lst))
 #m_m = min_max(lst)
 #print(lst)
