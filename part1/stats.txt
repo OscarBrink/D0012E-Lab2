@@ -1,0 +1,273 @@
+size: 100 interval: (1, 1000000)
+ops: 134
+
+size: 150 interval: (1, 1000000)
+ops: 212
+
+size: 200 interval: (1, 1000000)
+ops: 270
+
+size: 250 interval: (1, 1000000)
+ops: 370
+
+size: 300 interval: (1, 1000000)
+ops: 426
+
+size: 350 interval: (1, 1000000)
+ops: 476
+
+size: 400 interval: (1, 1000000)
+ops: 542
+
+size: 450 interval: (1, 1000000)
+ops: 642
+
+size: 500 interval: (1, 1000000)
+ops: 742
+
+size: 550 interval: (1, 1000000)
+ops: 804
+
+size: 600 interval: (1, 1000000)
+ops: 854
+
+size: 650 interval: (1, 1000000)
+ops: 904
+
+size: 700 interval: (1, 1000000)
+ops: 954
+
+size: 750 interval: (1, 1000000)
+ops: 1004
+
+size: 800 interval: (1, 1000000)
+ops: 1086
+
+size: 850 interval: (1, 1000000)
+ops: 1186
+
+size: 900 interval: (1, 1000000)
+ops: 1286
+
+size: 950 interval: (1, 1000000)
+ops: 1386
+
+size: 1000 interval: (1, 1000000)
+ops: 1486
+
+size: 1500 interval: (1, 1000000)
+ops: 2010
+
+size: 2000 interval: (1, 1000000)
+ops: 2974
+
+size: 2500 interval: (1, 1000000)
+ops: 3522
+
+size: 3000 interval: (1, 1000000)
+ops: 4022
+
+size: 3500 interval: (1, 1000000)
+ops: 4950
+
+size: 4000 interval: (1, 1000000)
+ops: 5950
+
+size: 4500 interval: (1, 1000000)
+ops: 6546
+
+size: 5000 interval: (1, 1000000)
+ops: 7046
+
+size: 5500 interval: (1, 1000000)
+ops: 7546
+
+size: 6000 interval: (1, 1000000)
+ops: 8046
+
+size: 6500 interval: (1, 1000000)
+ops: 8902
+
+size: 7000 interval: (1, 1000000)
+ops: 9902
+
+size: 7500 interval: (1, 1000000)
+ops: 10902
+
+size: 8000 interval: (1, 1000000)
+ops: 11902
+
+size: 8500 interval: (1, 1000000)
+ops: 12594
+
+size: 9000 interval: (1, 1000000)
+ops: 13094
+
+size: 9500 interval: (1, 1000000)
+ops: 13594
+
+size: 10000 interval: (1, 1000000)
+ops: 14094
+
+size: 15000 interval: (1, 1000000)
+ops: 21806
+
+size: 20000 interval: (1, 1000000)
+ops: 28190
+
+size: 25000 interval: (1, 1000000)
+ops: 33614
+
+size: 30000 interval: (1, 1000000)
+ops: 43614
+
+size: 35000 interval: (1, 1000000)
+ops: 51382
+
+size: 40000 interval: (1, 1000000)
+ops: 56382
+
+size: 45000 interval: (1, 1000000)
+ops: 61382
+
+size: 50000 interval: (1, 1000000)
+ops: 67230
+
+size: 55000 interval: (1, 1000000)
+ops: 77230
+
+size: 60000 interval: (1, 1000000)
+ops: 87230
+
+size: 65000 interval: (1, 1000000)
+ops: 97230
+
+size: 70000 interval: (1, 1000000)
+ops: 102766
+
+size: 75000 interval: (1, 1000000)
+ops: 107766
+
+size: 80000 interval: (1, 1000000)
+ops: 112766
+
+size: 85000 interval: (1, 1000000)
+ops: 117766
+
+size: 90000 interval: (1, 1000000)
+ops: 122766
+
+size: 95000 interval: (1, 1000000)
+ops: 127766
+
+size: 100000 interval: (1, 1000000)
+ops: 134462
+
+size: 150000 interval: (1, 1000000)
+ops: 215534
+
+size: 200000 interval: (1, 1000000)
+ops: 268926
+
+size: 250000 interval: (1, 1000000)
+ops: 368926
+
+size: 300000 interval: (1, 1000000)
+ops: 431070
+
+size: 350000 interval: (1, 1000000)
+ops: 481070
+
+size: 400000 interval: (1, 1000000)
+ops: 537854
+
+size: 450000 interval: (1, 1000000)
+ops: 637854
+
+size: 500000 interval: (1, 1000000)
+ops: 737854
+
+size: 550000 interval: (1, 1000000)
+ops: 812142
+
+size: 600000 interval: (1, 1000000)
+ops: 862142
+
+size: 650000 interval: (1, 1000000)
+ops: 912142
+
+size: 700000 interval: (1, 1000000)
+ops: 962142
+
+size: 750000 interval: (1, 1000000)
+ops: 1012142
+
+size: 800000 interval: (1, 1000000)
+ops: 1075710
+
+size: 850000 interval: (1, 1000000)
+ops: 1175710
+
+size: 900000 interval: (1, 1000000)
+ops: 1275710
+
+size: 950000 interval: (1, 1000000)
+ops: 1375710
+
+size: 1000000 interval: (1, 1000000)
+ops: 1475710
+
+size: 1500000 interval: (1, 1000000)
+ops: 2024286
+
+size: 2000000 interval: (1, 1000000)
+ops: 2951422
+
+size: 2500000 interval: (1, 1000000)
+ops: 3548574
+
+size: 3000000 interval: (1, 1000000)
+ops: 4048574
+
+size: 3500000 interval: (1, 1000000)
+ops: 4902846
+
+size: 4000000 interval: (1, 1000000)
+ops: 5902846
+
+size: 4500000 interval: (1, 1000000)
+ops: 6597150
+
+size: 5000000 interval: (1, 1000000)
+ops: 7097150
+
+size: 5500000 interval: (1, 1000000)
+ops: 7597150
+
+size: 6000000 interval: (1, 1000000)
+ops: 8097150
+
+size: 6500000 interval: (1, 1000000)
+ops: 8805694
+
+size: 7000000 interval: (1, 1000000)
+ops: 9805694
+
+size: 7500000 interval: (1, 1000000)
+ops: 10805694
+
+size: 8000000 interval: (1, 1000000)
+ops: 11805694
+
+size: 8500000 interval: (1, 1000000)
+ops: 12694302
+
+size: 9000000 interval: (1, 1000000)
+ops: 13194302
+
+size: 9500000 interval: (1, 1000000)
+ops: 13694302
+
+size: 10000000 interval: (1, 1000000)
+ops: 14194302
+
